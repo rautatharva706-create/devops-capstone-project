@@ -23,10 +23,10 @@ class TestAccountRoutes(unittest.TestCase):
 
     def setUp(self):
         """This runs before each individual test"""
-        db.drop_all()  # clean up the old tables
-        db.create_all()  # create new tables
         self.app_context = self.app.app_context()
         self.app_context.push()
+        db.drop_all()
+        db.create_all()
 
     def tearDown(self):
         """This runs after each individual test"""
