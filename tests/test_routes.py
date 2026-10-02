@@ -199,7 +199,7 @@ class TestAccountRoutes(unittest.TestCase):
         self.assertEqual(headers["X-Frame-Options"], "SAMEORIGIN")
         self.assertIn("X-Content-Type-Options", headers)
         self.assertEqual(headers["X-Content-Type-Options"], "nosniff")
-        self.assertIn("X-XSS-Protection", headers)
+        self.assertIn("Content-Security-Policy", headers)
         
     def test_cors_policy(self):
         """It should verify that CORS headers are active on the response"""
