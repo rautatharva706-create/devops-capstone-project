@@ -1,0 +1,13 @@
+{
+  "description": "An enterprise-grade RESTful microservice for managing customer accounts.",
+  "endpoints": {
+    "create_account": "POST /accounts",
+    "health_check": "GET /health",
+    "list_accounts": "GET /accounts",
+    "read_account": "GET /accounts/<id>",
+    "update_account": "PUT /accounts/<id>",
+    "delete_account": "DELETE /accounts/<id>"
+  },
+  "name": "Customer Accounts Microservice",
+  "version": "1.0"
+}

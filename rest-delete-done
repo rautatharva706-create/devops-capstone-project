@@ -1,0 +1,7 @@
+curl -i -X DELETE http://127.0.0.1:5000/accounts/1
+
+HTTP/1.1 204 NO CONTENT
+Server: gunicorn
+Date: Thu, 01 Oct 2026 17:35:10 GMT
+Connection: close
+Content-Type: application/json

@@ -1,0 +1,5 @@
+{
+  "name": "Account REST API Service",
+  "version": "1.0",
+  "paths": "http://localhost:8080/accounts"
+}

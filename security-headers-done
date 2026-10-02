@@ -1,0 +1,420 @@
+
+Test Flask CLI Commands
+[1;32m- It should call the db-create command[1;0m
+
+Test Cases for Account Model
+[1;32m- It should Create an account and add it to the database[1;0m
+[1;32m- It should Create an Account and assert that it exists[1;0m
+[1;32m- It should Delete an account from the database[1;0m
+[1;32m- It should Deserialize an account[1;0m
+[1;32m- It should not Deserialize an account with a KeyError[1;0m
+[1;32m- It should not Deserialize an account with a TypeError[1;0m
+[1;32m- It should Find an Account by name[1;0m
+[1;32m- It should List all Accounts in the database[1;0m
+[1;32m- It should Read an account[1;0m
+[1;32m- It should Serialize an account[1;0m
+[1;32m- It should Update an account[1;0m
+
+Account Service Tests
+[1;32m- It should not Create an Account when sending the wrong data[1;0m
+[1;32m- It should Create a new Account[1;0m
+[1;32m- It should be healthy[1;0m
+[1;32m- It should get 200_OK from the Home Page[1;0m
+[1;32m- It should not Create an Account when sending the wrong media type[1;0m
+
+Name                                             Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------
+_sysconfigdata__x86_64-linux-gnu.py                  1      1     0%   2
+asyncio/__init__.py                                 18     18     0%   5-47
+asyncio/base_events.py                            1086   1086     0%   16-1930
+asyncio/base_futures.py                             42     42     0%   1-80
+asyncio/base_subprocess.py                         196    196     0%   1-285
+asyncio/base_tasks.py                               65     65     0%   1-85
+asyncio/constants.py                                10     10     0%   1-27
+asyncio/coroutines.py                              159    159     0%   1-269
+asyncio/events.py                                  305    305     0%   3-795
+asyncio/exceptions.py                               19     19     0%   4-58
+asyncio/format_helpers.py                           50     50     0%   1-76
+asyncio/futures.py                                 220    220     0%   3-423
+asyncio/locks.py                                   201    201     0%   3-454
+asyncio/log.py                                       2      2     0%   3-7
+asyncio/protocols.py                                40     40     0%   3-216
+asyncio/queues.py                                  131    131     0%   1-252
+asyncio/runners.py                                  33     33     0%   1-70
+asyncio/selector_events.py                         747    747     0%   7-1097
+asyncio/sslproto.py                                381    381     0%   1-739
+asyncio/staggered.py                                54     54     0%   3-149
+asyncio/streams.py                                 381    381     0%   1-741
+asyncio/subprocess.py                              163    163     0%   1-241
+asyncio/tasks.py                                   480    480     0%   3-989
+asyncio/threads.py                                   9      9     0%   3-25
+asyncio/transports.py                              113    113     0%   3-335
+asyncio/trsock.py                                  138    138     0%   1-206
+asyncio/unix_events.py                             850    850     0%   3-1470
+click/__init__.py                                   67     67     0%   8-75
+click/_compat.py                                   313    313     0%   1-617
+click/core.py                                     1148   1148     0%   1-3047
+click/decorators.py                                203    203     0%   1-562
+click/exceptions.py                                127    127     0%   1-296
+click/formatting.py                                138    138     0%   1-301
+click/globals.py                                    28     28     0%   1-67
+click/parser.py                                    250    250     0%   25-531
+click/termui.py                                    192    192     0%   1-784
+click/types.py                                     412    412     0%   1-1093
+click/utils.py                                     235    235     0%   1-624
+colorsys.py                                        100    100     0%   24-163
+concurrent/__init__.py                               0      0   100%
+concurrent/futures/__init__.py                      16     16     0%   4-53
+concurrent/futures/_base.py                        303    303     0%   4-641
+contextvars.py                                       2      2     0%   1-4
+csv.py                                             260    260     0%   2-448
+decimal.py                                          10     10     0%   2-11
+dotenv/__init__.py                                  21     21     0%   1-42
+dotenv/main.py                                     175    175     0%   1-366
+dotenv/parser.py                                   111    111     0%   1-182
+dotenv/variables.py                                 55     55     0%   1-88
+email/_header_value_parser.py                     1865   1865     0%   70-3026
+email/contentmanager.py                            171    171     0%   1-248
+email/headerregistry.py                            296    296     0%   10-601
+email/policy.py                                     58     58     0%   5-224
+encodings/idna.py                                  179    179     0%   3-299
+factory/__init__.py                                 14     14     0%   4-83
+factory/alchemy.py                                  34     34     0%   4-83
+factory/base.py                                    323    323     0%   4-761
+factory/builder.py                                 161    161     0%   3-393
+factory/compat.py                                    4      4     0%   5-10
+factory/declarations.py                            283    283     0%   4-743
+factory/django.py                                  180    180     0%   5-348
+factory/enums.py                                     9      9     0%   5-25
+factory/errors.py                                    6      6     0%   5-25
+factory/faker.py                                    42     42     0%   5-85
+factory/fuzzy.py                                   161    161     0%   5-320
+factory/helpers.py                                  58     58     0%   5-118
+factory/mogo.py                                     14     14     0%   5-26
+factory/mongoengine.py                              15     15     0%   5-29
+factory/random.py                                   15     15     0%   1-28
+factory/utils.py                                    54     54     0%   4-121
+faker/__init__.py                                    5      5     0%   1-7
+faker/config.py                                      6      6     0%   1-13
+faker/decode/__init__.py                            10     10     0%   1-13
+faker/decode/codes.py                                1      1     0%   1
+faker/exceptions.py                                  6      6     0%   1-16
+faker/factory.py                                    58     58     0%   1-116
+faker/generator.py                                  98     98     0%   1-191
+faker/providers/__init__.py                        132    132     0%   1-742
+faker/providers/address/__init__.py                 57     57     0%   1-116
+faker/providers/address/en/__init__.py               3      3     0%   1-5
+faker/providers/address/en_US/__init__.py           72     72     0%   1-599
+faker/providers/automotive/__init__.py              31     31     0%   1-63
+faker/providers/automotive/en_US/__init__.py         3      3     0%   1-12
+faker/providers/bank/__init__.py                    59     59     0%   1-165
+faker/providers/bank/en_GB/__init__.py               4      4     0%   1-8
+faker/providers/barcode/__init__.py                 33     33     0%   1-122
+faker/providers/barcode/en_US/__init__.py           65     65     0%   1-249
+faker/providers/color/__init__.py                   35     35     0%   1-330
+faker/providers/color/color.py                     137    137     0%   14-386
+faker/providers/color/en_US/__init__.py              3      3     0%   1-7
+faker/providers/company/__init__.py                 17     17     0%   1-531
+faker/providers/company/en_US/__init__.py            3      3     0%   1-5
+faker/providers/credit_card/__init__.py             59     59     0%   1-195
+faker/providers/credit_card/en_US/__init__.py        3      3     0%   1-7
+faker/providers/currency/__init__.py                29     29     0%   1-425
+faker/providers/currency/en_US/__init__.py           5      5     0%   1-8
+faker/providers/date_time/__init__.py              335    335     0%   1-2607
+faker/providers/date_time/en_US/__init__.py          3      3     0%   1-5
+faker/providers/doi/__init__.py                      7      7     0%   1-22
+faker/providers/emoji/__init__.py                    6      6     0%   1-3528
+faker/providers/file/__init__.py                    58     58     0%   1-354
+faker/providers/geo/__init__.py                     29     29     0%   1-1049
+faker/providers/geo/en_US/__init__.py                3      3     0%   1-5
+faker/providers/internet/__init__.py               258    258     0%   1-802
+faker/providers/internet/en_US/__init__.py           3      3     0%   1-5
+faker/providers/isbn/__init__.py                    31     31     0%   1-75
+faker/providers/isbn/en_US/__init__.py               3      3     0%   1-5
+faker/providers/isbn/isbn.py                        33     33     0%   6-75
+faker/providers/job/__init__.py                     14     14     0%   1-660
+faker/providers/job/en_US/__init__.py                3      3     0%   1-5
+faker/providers/lorem/__init__.py                   79     79     0%   1-275
+faker/providers/lorem/en_US/__init__.py              5      5     0%   1-995
+faker/providers/misc/__init__.py                   273    273     0%   1-781
+faker/providers/misc/en_US/__init__.py               3      3     0%   1-5
+faker/providers/passport/__init__.py                23     23     0%   1-47
+faker/providers/passport/en_US/__init__.py          45     45     0%   1-101
+faker/providers/person/__init__.py                 103    103     0%   1-330
+faker/providers/person/en_US/__init__.py            21     21     0%   1-1830
+faker/providers/phone_number/__init__.py            12     12     0%   1-331
+faker/providers/phone_number/en_US/__init__.py       7      7     0%   1-50
+faker/providers/profile/__init__.py                 22     22     0%   1-60
+faker/providers/python/__init__.py                 258    258     0%   1-574
+faker/providers/sbn/__init__.py                     25     25     0%   1-53
+faker/providers/sbn/rules.py                         4      4     0%   7-13
+faker/providers/sbn/sbn.py                          18     18     0%   6-40
+faker/providers/ssn/__init__.py                      6      6     0%   1-10
+faker/providers/ssn/en_US/__init__.py               52     52     0%   1-233
+faker/providers/user_agent/__init__.py              66     66     0%   1-360
+faker/proxy.py                                     212    212     0%   1-394
+faker/typing.py                                     27     27     0%   1-43
+faker/utils/__init__.py                              0      0   100%
+faker/utils/datasets.py                              5      5     0%   1-8
+faker/utils/decorators.py                           24     24     0%   1-38
+faker/utils/distribution.py                         56     56     0%   1-88
+faker/utils/loading.py                              36     36     0%   1-60
+faker/utils/text.py                                 16     16     0%   1-28
+flask/__init__.py                                   43     43     0%   1-45
+flask/app.py                                       581    581     0%   1-2095
+flask/blueprints.py                                202    202     0%   1-597
+flask/cli.py                                       423    423     0%   1-992
+flask/config.py                                    107    107     0%   1-337
+flask/ctx.py                                       174    174     0%   1-510
+flask/globals.py                                    32     32     0%   1-59
+flask/helpers.py                                   182    182     0%   1-790
+flask/json/__init__.py                              78     78     0%   1-300
+flask/json/tag.py                                  127    127     0%   43-312
+flask/logging.py                                    29     29     0%   1-74
+flask/scaffold.py                                  233    233     0%   1-869
+flask/sessions.py                                  136    136     0%   1-412
+flask/signals.py                                    32     32     0%   1-56
+flask/templating.py                                 90     90     0%   1-166
+flask/typing.py                                     23     23     0%   1-55
+flask/wrappers.py                                   57     57     0%   1-171
+flask_cors/__init__.py                              12     12     0%   1-23
+flask_cors/core.py                                 221    221     0%   1-551
+flask_cors/decorator.py                             31     31     0%   1-143
+flask_cors/extension.py                             46     46     0%   1-237
+flask_sqlalchemy/__init__.py                       524    524     0%   2-1132
+flask_sqlalchemy/_compat.py                         27     27     0%   1-44
+flask_sqlalchemy/model.py                           61     61     0%   1-154
+flask_sqlalchemy/utils.py                           22     22     0%   1-40
+flask_talisman/__init__.py                           2      2     0%   15-20
+flask_talisman/talisman.py                         186    186     0%   14-445
+greenlet/__init__.py                                22     22     0%   2-69
+hmac.py                                             96     96     0%   6-203
+html/__init__.py                                    37     37     0%   5-132
+html/entities.py                                     9      9     0%   3-2510
+http/cookiejar.py                                 1105   1105     0%   28-2110
+http/server.py                                     598    598     0%   83-1308
+importlib/metadata.py                              251    251     0%   1-604
+importlib_metadata/__init__.py                     413    413     0%   10-1191
+importlib_metadata/_adapters.py                     46     46     0%   1-136
+importlib_metadata/_collections.py                  13     13     0%   1-34
+importlib_metadata/_compat.py                       17     17     0%   1-56
+importlib_metadata/_functools.py                    26     26     0%   1-135
+importlib_metadata/_itertools.py                    61     61     0%   1-171
+importlib_metadata/_meta.py                         15     15     0%   1-64
+importlib_metadata/_text.py                         25     25     0%   1-99
+importlib_metadata/_typing.py                        5      5     0%   1-7
+importlib_metadata/compat/__init__.py                0      0   100%
+importlib_metadata/compat/py39.py                   16     16     0%   5-42
+importlib_metadata/compat/py311.py                   5      5     0%   1-22
+itsdangerous/__init__.py                            26     26     0%   1-38
+itsdangerous/_json.py                               12     12     0%   1-18
+itsdangerous/encoding.py                            28     28     0%   1-54
+itsdangerous/exc.py                                 27     27     0%   1-106
+itsdangerous/serializer.py                         120    120     0%   1-406
+itsdangerous/signer.py                             105    105     0%   1-266
+itsdangerous/timed.py                               96     96     0%   1-228
+itsdangerous/url_safe.py                            40     40     0%   1-79
+jinja2/__init__.py                                  32     32     0%   6-38
+jinja2/_identifier.py                                2      2     0%   1-4
+jinja2/async_utils.py                               57     57     0%   1-99
+jinja2/bccache.py                                  170    170     0%   9-408
+jinja2/compiler.py                                1199   1199     0%   3-1998
+jinja2/defaults.py                                  23     23     0%   1-39
+jinja2/environment.py                              591    591     0%   5-1672
+jinja2/exceptions.py                                66     66     0%   1-163
+jinja2/filters.py                                  525    525     0%   3-1818
+jinja2/idtracking.py                               211    211     0%   1-317
+jinja2/lexer.py                                    340    340     0%   7-866
+jinja2/loaders.py                                  269    269     0%   5-691
+jinja2/nodes.py                                    555    555     0%   6-1206
+jinja2/optimizer.py                                 19     19     0%   11-48
+jinja2/parser.py                                   659    659     0%   3-1049
+jinja2/runtime.py                                  485    485     0%   3-1062
+jinja2/utils.py                                    316    316     0%   1-766
+jinja2/visitor.py                                   43     43     0%   5-92
+markupsafe/__init__.py                             180    180     0%   1-396
+mimetypes.py                                       195    195     0%   26-612
+numbers.py                                         178    178     0%   4-393
+psycopg2/__init__.py                                19     19     0%   51-126
+psycopg2/_ipaddress.py                              27     27     0%   27-90
+psycopg2/_json.py                                   64     64     0%   31-199
+psycopg2/_range.py                                 262    262     0%   28-537
+psycopg2/errors.py                                   3      3     0%   32-38
+psycopg2/extensions.py                              87     87     0%   36-213
+psycopg2/extras.py                                 632    632     0%   29-1306
+secrets.py                                          22     22     0%   9-72
+service/__init__.py                                 21      3    86%   37-40
+service/common/__init__.py                           0      0   100%
+service/common/cli_commands.py                       7      0   100%
+service/common/error_handlers.py                    32      9    72%   35-37, 46-48, 76-78
+service/common/log_handlers.py                      10      1    90%   21
+service/common/status.py                            46      0   100%
+service/config.py                                   11      0   100%
+service/models.py                                   69      3    96%   32, 98, 127
+service/routes.py                                   60     26    57%   67-70, 80-84, 94-108, 118-125
+shlex.py                                           263    263     0%   10-350
+socketserver.py                                    308    308     0%   123-844
+sqlalchemy/__init__.py                             134    134     0%   8-158
+sqlalchemy/dialects/__init__.py                     33     33     0%   8-72
+sqlalchemy/dialects/postgresql/__init__.py          59     59     0%   7-69
+sqlalchemy/dialects/postgresql/array.py            115    115     0%   8-438
+sqlalchemy/dialects/postgresql/asyncpg.py          534    534     0%   7-1119
+sqlalchemy/dialects/postgresql/base.py            1206   1206     0%   8-4735
+sqlalchemy/dialects/postgresql/dml.py               72     72     0%   8-274
+sqlalchemy/dialects/postgresql/ext.py               69     69     0%   8-282
+sqlalchemy/dialects/postgresql/hstore.py           145    145     0%   8-457
+sqlalchemy/dialects/postgresql/json.py              61     61     0%   7-327
+sqlalchemy/dialects/postgresql/pg8000.py           288    288     0%   7-594
+sqlalchemy/dialects/postgresql/psycopg2.py         299    299     0%   7-1088
+sqlalchemy/dialects/postgresql/psycopg2cffi.py      19     19     0%   7-60
+sqlalchemy/dialects/postgresql/pygresql.py         168    168     0%   7-278
+sqlalchemy/dialects/postgresql/pypostgresql.py      47     47     0%   7-126
+sqlalchemy/dialects/postgresql/ranges.py            40     40     0%   7-138
+sqlalchemy/engine/__init__.py                       46     46     0%   8-62
+sqlalchemy/engine/base.py                         1027   1027     0%   7-3450
+sqlalchemy/engine/characteristics.py                19     19     0%   1-56
+sqlalchemy/engine/create.py                        116    116     0%   9-743
+sqlalchemy/engine/cursor.py                        684    684     0%   8-1956
+sqlalchemy/engine/default.py                       852    852     0%   8-1941
+sqlalchemy/engine/events.py                         77     77     0%   9-835
+sqlalchemy/engine/interfaces.py                    173    173     0%   8-1736
+sqlalchemy/engine/mock.py                           40     40     0%   8-118
+sqlalchemy/engine/reflection.py                    331    331     0%   8-1160
+sqlalchemy/engine/result.py                        675    675     0%   8-1915
+sqlalchemy/engine/row.py                           206    206     0%   8-621
+sqlalchemy/engine/url.py                           238    238     0%   8-819
+sqlalchemy/engine/util.py                          108    108     0%   8-253
+sqlalchemy/event/__init__.py                        10     10     0%   8-17
+sqlalchemy/event/api.py                             25     25     0%   8-219
+sqlalchemy/event/attr.py                           234    234     0%   8-459
+sqlalchemy/event/base.py                           155    155     0%   8-345
+sqlalchemy/event/legacy.py                          58     58     0%   8-193
+sqlalchemy/event/registry.py                       147    147     0%   8-297
+sqlalchemy/events.py                                 6      6     0%   8-14
+sqlalchemy/exc.py                                  199    199     0%   8-732
+sqlalchemy/ext/__init__.py                           2      2     0%   8-11
+sqlalchemy/ext/declarative/__init__.py              24     24     0%   8-53
+sqlalchemy/ext/declarative/extensions.py           104    104     0%   7-456
+sqlalchemy/future/__init__.py                        7      7     0%   8-18
+sqlalchemy/future/engine.py                         51     51     0%   1-413
+sqlalchemy/inspection.py                            29     29     0%   8-93
+sqlalchemy/log.py                                   90     90     0%   9-241
+sqlalchemy/orm/__init__.py                         139    139     0%   8-344
+sqlalchemy/orm/attributes.py                       836    836     0%   8-2337
+sqlalchemy/orm/base.py                             157    157     0%   8-578
+sqlalchemy/orm/clsregistry.py                      239    239     0%   7-441
+sqlalchemy/orm/collections.py                      736    736     0%   8-1706
+sqlalchemy/orm/context.py                         1209   1209     0%   7-3132
+sqlalchemy/orm/decl_api.py                         206    206     0%   7-1062
+sqlalchemy/orm/decl_base.py                        565    565     0%   7-1210
+sqlalchemy/orm/dependency.py                       498    498     0%   8-1286
+sqlalchemy/orm/descriptor_props.py                 286    286     0%   8-745
+sqlalchemy/orm/dynamic.py                          234    234     0%   8-491
+sqlalchemy/orm/evaluator.py                        138    138     0%   8-275
+sqlalchemy/orm/events.py                           368    368     0%   8-2893
+sqlalchemy/orm/exc.py                               69     69     0%   8-204
+sqlalchemy/orm/identity.py                         163    163     0%   8-249
+sqlalchemy/orm/instrumentation.py                  304    304     0%   8-652
+sqlalchemy/orm/interfaces.py                       231    231     0%   8-1018
+sqlalchemy/orm/loading.py                          566    566     0%   8-1465
+sqlalchemy/orm/mapper.py                          1186   1186     0%   8-3738
+sqlalchemy/orm/path_registry.py                    244    244     0%   7-519
+sqlalchemy/orm/persistence.py                      857    857     0%   8-2511
+sqlalchemy/orm/properties.py                       123    123     0%   8-433
+sqlalchemy/orm/query.py                            721    721     0%   8-3516
+sqlalchemy/orm/relationships.py                    995    995     0%   8-3707
+sqlalchemy/orm/scoping.py                           55     55     0%   8-228
+sqlalchemy/orm/session.py                         1198   1198     0%   7-4435
+sqlalchemy/orm/state.py                            402    402     0%   8-1025
+sqlalchemy/orm/strategies.py                      1083   1083     0%   8-3143
+sqlalchemy/orm/strategy_options.py                 650    650     0%   7-2023
+sqlalchemy/orm/sync.py                              71     71     0%   8-157
+sqlalchemy/orm/unitofwork.py                       378    378     0%   8-781
+sqlalchemy/orm/util.py                             601    601     0%   9-2177
+sqlalchemy/pool/__init__.py                         19     19     0%   9-39
+sqlalchemy/pool/base.py                            406    406     0%   9-1171
+sqlalchemy/pool/dbapi_proxy.py                      53     53     0%   9-147
+sqlalchemy/pool/events.py                           35     35     0%   8-290
+sqlalchemy/pool/impl.py                            215    215     0%   9-514
+sqlalchemy/processors.py                            86     86     0%   9-176
+sqlalchemy/schema.py                                49     49     0%   8-59
+sqlalchemy/sql/__init__.py                         120    120     0%   8-150
+sqlalchemy/sql/annotation.py                       166    166     0%   8-368
+sqlalchemy/sql/base.py                             642    642     0%   8-1696
+sqlalchemy/sql/coercions.py                        495    495     0%   8-1103
+sqlalchemy/sql/compiler.py                        2197   2197     0%   8-5681
+sqlalchemy/sql/crud.py                             329    329     0%   8-1091
+sqlalchemy/sql/ddl.py                              336    336     0%   7-1338
+sqlalchemy/sql/default_comparator.py                95     95     0%   8-307
+sqlalchemy/sql/dml.py                              330    330     0%   7-1514
+sqlalchemy/sql/elements.py                        1417   1417     0%   8-5443
+sqlalchemy/sql/events.py                            13     13     0%   8-223
+sqlalchemy/sql/expression.py                       155    155     0%   8-278
+sqlalchemy/sql/functions.py                        365    365     0%   8-1585
+sqlalchemy/sql/lambdas.py                          531    531     0%   8-1317
+sqlalchemy/sql/naming.py                           122    122     0%   8-210
+sqlalchemy/sql/operators.py                        342    342     0%   11-1693
+sqlalchemy/sql/roles.py                            102    102     0%   8-237
+sqlalchemy/sql/schema.py                          1296   1296     0%   8-5281
+sqlalchemy/sql/selectable.py                      1553   1553     0%   8-6950
+sqlalchemy/sql/sqltypes.py                         964    964     0%   8-3375
+sqlalchemy/sql/traversals.py                       639    639     0%   1-1563
+sqlalchemy/sql/type_api.py                         425    425     0%   8-1981
+sqlalchemy/sql/util.py                             525    525     0%   8-1126
+sqlalchemy/sql/visitors.py                         240    240     0%   8-852
+sqlalchemy/types.py                                 59     59     0%   8-119
+sqlalchemy/util/__init__.py                        169    169     0%   9-178
+sqlalchemy/util/_collections.py                    656    656     0%   8-1077
+sqlalchemy/util/_compat_py3k.py                     43     43     0%   8-67
+sqlalchemy/util/_concurrency_py3k.py                74     74     0%   8-194
+sqlalchemy/util/_preloaded.py                       20     20     0%   8-68
+sqlalchemy/util/compat.py                          343    343     0%   8-635
+sqlalchemy/util/concurrency.py                      40     40     0%   8-73
+sqlalchemy/util/deprecations.py                    182    182     0%   8-483
+sqlalchemy/util/langhelpers.py                     917    917     0%   8-1945
+sqlalchemy/util/queue.py                           133    133     0%   8-291
+sqlalchemy/util/topological.py                      48     48     0%   8-100
+stringprep.py                                       65     65     0%   2-272
+tarfile.py                                        1726   1726     0%   29-3005
+unittest/mock.py                                  1539   1539     0%   7-2892
+uuid.py                                            364    364     0%   47-728
+werkzeug/__init__.py                                 5      5     0%   1-6
+werkzeug/_internal.py                              273    273     0%   1-548
+werkzeug/datastructures.py                        1444   1444     0%   1-3037
+werkzeug/exceptions.py                             238    238     0%   46-882
+werkzeug/formparser.py                             169    169     0%   1-455
+werkzeug/http.py                                   497    497     0%   1-1371
+werkzeug/local.py                                  249    249     0%   1-526
+werkzeug/routing.py                                819    819     0%   108-2332
+werkzeug/sansio/__init__.py                          0      0   100%
+werkzeug/sansio/multipart.py                       155    155     0%   1-260
+werkzeug/sansio/request.py                         173    173     0%   1-543
+werkzeug/sansio/response.py                        248    248     0%   1-696
+werkzeug/sansio/utils.py                            62     62     0%   1-142
+werkzeug/security.py                                51     51     0%   1-140
+werkzeug/serving.py                                468    468     0%   14-1091
+werkzeug/urls.py                                   434    434     0%   6-1067
+werkzeug/user_agent.py                              17     17     0%   1-47
+werkzeug/utils.py                                  246    246     0%   1-705
+werkzeug/wrappers/__init__.py                        3      3     0%   1-3
+werkzeug/wrappers/request.py                       174    174     0%   1-611
+werkzeug/wrappers/response.py                      290    290     0%   1-877
+werkzeug/wsgi.py                                   398    398     0%   1-982
+zipfile.py                                        1517   1517     0%   6-2467
+zipp/__init__.py                                   183    183     0%   10-457
+zipp/_functools.py                                  13     13     0%   1-31
+zipp/compat/__init__.py                              0      0   100%
+zipp/compat/overlay.py                              11     11     0%   21-37
+zipp/compat/py310.py                                 3      3     0%   1-9
+zipp/compat/py313.py                                15     15     0%   1-34
+zipp/glob.py                                        34     34     0%   1-116
+zoneinfo/__init__.py                                14     14     0%   1-31
+zoneinfo/_common.py                                 71     71     0%   1-164
+zoneinfo/_tzpath.py                                 85     85     0%   1-175
+------------------------------------------------------------------------------
+TOTAL                                            85602  85388     1%
+----------------------------------------------------------------------
+Ran 17 tests in 0.756s
+
+OK
+

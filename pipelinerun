@@ -1,0 +1,127 @@
+[init : remove] Removing all files from /workspace/source ...
+
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true '=' true ]
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ]
+[clone : clone] + rm -rf '/workspace/output//*'
+[clone : clone] + rm -rf '/workspace/output//.[!.]*'
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init '-url=https://github.com/rautatharva706-create/devops-capstone-project.git' '-revision=main' '-refspec=' '-path=/workspace/output/' '-sslVerify=true' '-submodules=true' '-depth=1' '-sparseCheckoutDirectories='
+[clone : clone] {"level":"info","ts":1754841870.4915643,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/rautatharva706-create/devops-capstone-project.git @ c9e427eb9188dc2f18595c5e45d7192bcb62ba6d (grafted, HEAD, origin/main) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1754841871.1710072,"caller":"git/git.go:215","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] + cd /workspace/output/
+[clone : clone] + git rev-parse HEAD
+[clone : clone] + RESULT_SHA=c9e427eb9188dc2f18595c5e45d7192bcb62ba6d
+[clone : clone] + EXIT_CODE=0
+[clone : clone] + '[' 0 '!=' 0 ]
+[clone : clone] + git log -1 '--pretty=%ct'
+[clone : clone] + RESULT_COMMITTER_DATE=1754840664
+[clone : clone] + printf '%s' 1754840664
+[clone : clone] + printf '%s' c9e427eb9188dc2f18595c5e45d7192bcb62ba6d
+[clone : clone] + printf '%s' https://github.com/rautatharva706-create/devops-capstone-project.git
+
+[lint : flake8] Collecting Werkzeug==2.1.2
+[lint : flake8]   Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+[lint : flake8] Collecting SQLAlchemy==1.4.46
+[lint : flake8]   Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.whl (1.6 MB)
+[lint : flake8] Collecting Flask==2.1.2
+[lint : flake8]   Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+[lint : flake8] Collecting Flask-SQLAlchemy==2.5.1
+[lint : flake8]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+[lint : flake8] Collecting psycopg2-binary==2.9.3
+[lint : flake8]   Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.whl (3.0 MB)
+[lint : flake8] Collecting python-dotenv==0.20.0
+[lint : flake8]   Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+[lint : flake8] Collecting gunicorn==20.1.0
+[lint : flake8]   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+[lint : flake8] Collecting flake8==4.0.1
+[lint : flake8]   Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+[lint : flake8] Collecting nose==1.3.7
+[lint : flake8]   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+[lint : flake8] Collecting Flask-Talisman==1.1.0
+[lint : flake8]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
+[lint : flake8] Collecting Flask-Cors==6.0.1
+[lint : flake8]   Downloading flask_cors-6.0.1-py3-none-any.whl (13 kB)
+[lint : flake8] Successfully installed Flask-2.1.2 Flask-Cors-6.0.1 Flask-SQLAlchemy-2.5.1 Flask-Talisman-1.1.0 SQLAlchemy-1.4.46 flake8-4.0.1 gunicorn-20.1.0 nose-1.3.7 psycopg2-binary-2.9.3 python-dotenv-0.20.0
+[lint : flake8] Running flake8 syntax checking...
+[lint : flake8] flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+[lint : flake8] 0
+[lint : flake8] flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
+[lint : flake8] 0
+
+[tests : nosetests] Running nosetests testing suite...
+[tests : nosetests] Test Flask CLI Commands
+[tests : nosetests] - It should call the db-create command
+[tests : nosetests] 
+[tests : nosetests] Test Cases for Account Model
+[tests : nosetests] - It should Create an account and add it to the database
+[tests : nosetests] - It should Create an Account and assert that it exists
+[tests : nosetests] - It should Delete an account from the database
+[tests : nosetests] - It should Deserialize an account
+[tests : nosetests] - It should not Deserialize an account with a KeyError
+[tests : nosetests] - It should not Deserialize an account with a TypeError
+[tests : nosetests] - It should Find an Account by name
+[tests : nosetests] - It should List all Accounts in the database
+[tests : nosetests] - It should Read an account
+[tests : nosetests] - It should Serialize an account
+[tests : nosetests] - It should Update an account
+[tests : nosetests] 
+[tests : nosetests] Account Service Tests
+[tests : nosetests] - It should not Create an Account when sending the wrong data
+[tests : nosetests] - It should Create a new Account
+[tests : nosetests] - It should be healthy
+[tests : nosetests] - It should get 200_OK from the Home Page
+[tests : nosetests] - It should not Create an Account when sending the wrong media type
+[tests : nosetests] - It should Delete an Account
+[tests : nosetests] - It should not Delete an Account that is not found
+[tests : nosetests] - It should List all Accounts
+[tests : nosetests] - It should Read a single Account
+[tests : nosetests] - It should not Read an Account that is not found
+[tests : nosetests] - It should Update an existing Account
+[tests : nosetests] - It should not Update an Account that is not found
+[tests : nosetests] - It should return 405 Method Not Allowed for invalid method
+[tests : nosetests] 
+[tests : nosetests] Name                               Stmts   Miss  Cover   Missing
+[tests : nosetests] ----------------------------------------------------------------
+[tests : nosetests] service/__init__.py                   21      3    86%   37-40
+[tests : nosetests] service/common/cli_commands.py         7      0   100%
+[tests : nosetests] service/common/error_handlers.py      32      2    94%   35, 46
+[tests : nosetests] service/common/log_handlers.py        10      1    90%   21
+[tests : nosetests] service/common/status.py              46      0   100%
+[tests : nosetests] service/config.py                     11      0   100%
+[tests : nosetests] service/models.py                     69      3    96%   32, 98, 127
+[tests : nosetests] service/routes.py                     72      3    96%   45, 87, 112
+[tests : nosetests] ----------------------------------------------------------------
+[tests : nosetests] TOTAL                                268     12    96%
+[tests : nosetests] ----------------------------------------------------------------------
+[tests : nosetests] Ran 24 tests in 1.482s
+[tests : nosetests] 
+[tests : nosetests] OK
+
+[build : build-and-push] STEP 1/8: FROM python:3.9-slim
+[build : build-and-push] STEP 2/8: WORKDIR /app
+[build : build-and-push] STEP 3/8: COPY requirements.txt .
+[build : build-and-push] STEP 4/8: RUN pip install --no-cache-dir -r requirements.txt
+[build : build-and-push] STEP 5/8: COPY service service
+[build : build-and-push] STEP 6/8: RUN useradd -r theia && chown -R theia /app
+[build : build-and-push] STEP 7/8: USER theia
+[build : build-and-push] STEP 8/8: EXPOSE 8080
+[build : build-and-push] COMMIT image-registry.openshift-image-registry.svc:5000/sn-labs-atharr/accounts:1
+[build : build-and-push] Successfully tagged image-registry.openshift-image-registry.svc:5000/sn-labs-atharr/accounts:1
+[build : build-and-push] Pushing image image-registry.openshift-image-registry.svc:5000/sn-labs-atharr/accounts:1 ...
+[build : build-and-push] Successfully pushed image
+
+[deploy : deploy-to-k8s] + kubectl apply -f deploy/deployment.yaml
+[deploy : deploy-to-k8s] deployment.apps/accounts configured
+[deploy : deploy-to-k8s] service/accounts unchanged
+[deploy : deploy-to-k8s] + kubectl rollout status deployment/accounts
+[deploy : deploy-to-k8s] Waiting for deployment "accounts" rollout to finish: 1 of 2 updated replicas are available...
+[deploy : deploy-to-k8s] deployment "accounts" successfully rolled out

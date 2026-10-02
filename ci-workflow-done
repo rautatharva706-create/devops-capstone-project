@@ -1,0 +1,50 @@
+Run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+Run flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
+Run nosetests
+Test Flask CLI Commands
+- It should call the db-create command
+
+Test Cases for Account Model
+- It should Create an account and add it to the database
+- It should Create an Account and assert that it exists
+- It should Delete an account from the database
+- It should Deserialize an account
+- It should not Deserialize an account with a KeyError
+- It should not Deserialize an account with a TypeError
+- It should Find an Account by name
+- It should List all Accounts in the database
+- It should Read an account
+- It should Serialize an account
+- It should Update an account
+
+Account Service Tests
+- It should not Create an Account when sending the wrong data
+- It should Create a new Account
+- It should be healthy
+- It should get 200_OK from the Home Page
+- It should not Create an Account when sending the wrong media type
+- It should Delete an Account
+- It should not Delete an Account that is not found
+- It should List all Accounts
+- It should Read a single Account
+- It should not Read an Account that is not found
+- It should Update an existing Account
+- It should not Update an Account that is not found
+- It should return 405 Method Not Allowed for invalid method
+
+Name                               Stmts   Miss  Cover   Missing
+----------------------------------------------------------------
+service/__init__.py                   21      3    86%   37-40
+service/common/cli_commands.py         7      0   100%
+service/common/error_handlers.py      32      2    94%   35, 46
+service/common/log_handlers.py        10      1    90%   21
+service/common/status.py              46      0   100%
+service/config.py                     11      0   100%
+service/models.py                     69      3    96%   32, 98, 127
+service/routes.py                     72      3    96%   45, 87, 112
+----------------------------------------------------------------
+TOTAL                                268     12    96%
+----------------------------------------------------------------------
+Ran 24 tests in 1.482s
+
+OK

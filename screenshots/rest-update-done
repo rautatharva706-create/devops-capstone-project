@@ -1,0 +1,16 @@
+$ curl -i -X PUT -H "Content-Type: application/json" -d '{"name":"Jane Smith", "email":"jane@example.com", "address":"789 Pine Rd (Updated)", "phone_number":"555-0000"}' http://localhost:8080/accounts/1
+HTTP/1.1 200 OK
+Content-Type: application/json
+Access-Control-Allow-Origin: *
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+{
+  "address": "789 Pine Rd (Updated)",
+  "created_at": "2026-05-17T15:42:01.385741",
+  "email": "jane@example.com",
+  "id": 1,
+  "name": "Jane Smith",
+  "phone_number": "555-0000"
+}

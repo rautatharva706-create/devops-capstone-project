@@ -1,0 +1,9 @@
+curl -i -X PUT http://127.0.0.1:5000/accounts/1 -H "Content-Type: application/json" -d '{"name":"Jane Doe","email":"jane@doe.com","address":"456 New St.","phone":"555-2222"}'
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Thu, 01 Oct 2026 17:33:52 GMT
+Connection: close
+Content-Type: application/json
+Content-Length: 121
+
+{"address":"456 New St.","date_joined":"2026-10-01","email":"jane@doe.com","id":1,"name":"Jane Doe","phone_number":null}

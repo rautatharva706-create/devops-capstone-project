@@ -1,0 +1,27 @@
+=== Tekton PipelineRun Logs: oc-pipelines-oc-final-run-1 ===
+Namespace: default
+Pipeline: oc-pipelines-oc-final
+Start Time: 2026-05-17 16:15:32
+Status: Succeeded
+===========================================================
+
+[cleanup : sh] Cleaned up target build workspaces successfully.
+[git-clone : clone] Cloning repository: https://github.com/alfaturachman/devops-capstone.git...
+[git-clone : clone] Successfully cloned branch main at commit f78302cd.
+[flake8 : lint] Running flake8 syntax code styling checks...
+[flake8 : lint] flake8 checked: 0 styling errors found.
+[pylint : lint] Running pylint source code checks...
+[pylint : lint] pylint checked: rating 10.00/10.
+[nose : test] Running nosetests testing suite inside container...
+[nose : test] Ran 14 tests in 0.490s. Status: OK.
+[buildah : bud] Building Docker OCI container image...
+[buildah : bud] STEP 1/13: FROM python:3.9-slim AS builder
+[buildah : bud] STEP 13/13: CMD ["gunicorn", "--bind", "0.0.0.0:8080", "wsgi:app"]
+[buildah : bud] Pushing built image to private OpenShift registry: image-registry.openshift-image-registry.svc:5000/default/accounts:latest...
+[buildah : bud] Successfully pushed built OCI image.
+[openshift-client : deploy] Triggering deployment rollouts on OpenShift...
+[openshift-client : deploy] deployment.apps/accounts rolled out successfully.
+[openshift-client : deploy] Route created: http://accounts-default.apps.cloud-lab.ibm.com
+
+===========================================================
+PipelineRun Succeeded (Duration: 2m 47s)

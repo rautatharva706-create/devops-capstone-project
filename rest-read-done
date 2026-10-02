@@ -1,0 +1,9 @@
+curl -i -X GET http://127.0.0.1:5000/accounts/1
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Thu, 01 Oct 2026 17:30:55 GMT
+Connection: close
+Content-Type: application/json
+Content-Length: 122
+
+{"address":"123 Main St.","date_joined":"2026-10-01","email":"john@doe.com","id":1,"name":"John Doe","phone_number":null}

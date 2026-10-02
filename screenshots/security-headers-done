@@ -1,0 +1,21 @@
+developer@workspace:~/devops-capstone$ nosetests tests/test_routes.py -v
+It should verify that CORS headers are active on the response ... ok
+It should create a new account successfully ... ok
+It should return 400 Bad Request when missing fields ... ok
+It should return 415 Unsupported Media Type on bad content type ... ok
+It should delete an account and return 204 No Content ... ok
+It should return healthy status code 200 ... ok
+It should return the root landing page details ... ok
+It should list all accounts ... ok
+It should return 405 Method Not Allowed for disallowed HTTP actions ... ok
+It should retrieve a specific account ... ok
+It should return 404 if account is not found ... ok
+It should verify that Talisman HTTP Security Headers are set ... ok
+It should update an existing account ... ok
+It should return 404 if trying to update non-existing account ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.485s
+
+OK
+developer@workspace:~/devops-capstone$

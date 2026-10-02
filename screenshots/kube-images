@@ -1,0 +1,4 @@
+REPOSITORY                    TAG       IMAGE ID       CREATED         SIZE
+devops-capstone               latest    f783109a12c8   2 minutes ago   122MB
+python                        3.9-slim  b73523fa9900   2 weeks ago     115MB
+builder                       latest    d278ab5a8fcd   2 minutes ago   385MB
